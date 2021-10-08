@@ -39,12 +39,10 @@ public class Rekursion
     }
     
     public static int toInt(String zahl) {
-        if (zahl.equals("0")) {
+        if (zahl.length()==0) {
             return 0;
-        } else if (zahl.equals("1")) {
-            return 1;
         } else {
-            return toInt(zahl.substring(0,zahl.length()-1))*2 + (int) zahl.charAt(zahl.length()-1);
+            return toInt(zahl.substring(0,zahl.length()-1))*2 + (int) zahl.charAt(zahl.length()-1) % 2;
         }
     }
 }
